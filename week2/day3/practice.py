@@ -8,14 +8,33 @@ commands = ["show", "add", "delete", "clear", "quit"]
 while True:
     
     size = len(shopping_cart.items())
-    command = input("What would you like to do? You can type 'show', 'add', 'delete', 'clear', or 'Quit': ").lower()
+    command = input("*Shopping Cart* You can type 'show', 'add', 'delete', 'clear', or 'Quit': ").lower()
 
     if command not in commands:
         print(f'{command.title()} isn\'t a valid response! Try again.')
-    elif command != "add" and size == 0:
+    if command == "quit":
+        response = input("Are you sure? You'll lose your entire cart. Type 'yes' or 'no': ").lower()
+        if response == "yes":
+            print("Sorry to see you go!")
+            break
+        elif response == "no":
+            print("Yes! Nice choice!")
+        else:
+            print("Sorry! try again")
+    elif command in commands and command != "add" and command != "quit" and size == 0:
         print("You haven't added any items yet! Try adding first.")
     elif command == "add":
         item = input("What would you like to add to your shopping cart? ")
+        if item in shopping_cart:
+            update = (f'You already have {item} in your cart! Would you like to update the quanity?').lower()
+            if update == "yes":
+                amount = input("New quanitity: ")
+                shopping_cart[item] = amount
+                print("Updated!")
+            elif update == "no":
+                print("Okay!")
+            else:
+                print("Sorry, try again")
         quantity = input("How many would you like to add? ")
         shopping_cart[item] = quantity
     elif command == "show":
