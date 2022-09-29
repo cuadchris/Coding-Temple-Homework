@@ -1,9 +1,6 @@
 shopping_cart = {}
 
 commands = ["show", "add", "delete", "clear", "quit"]
-# command = input("What would you like to do? You can type 'show', 'add', 'delete', 'clear', or 'Quit': ").lower()
-# size = len(shopping_cart.items())
-
 
 while True:
     
@@ -24,22 +21,23 @@ while True:
     elif command in commands and command != "add" and command != "quit" and size == 0:
         print("You haven't added any items yet! Try adding first.")
     elif command == "add":
-        item = input("What would you like to add to your shopping cart? ")
+        item = input("What would you like to add to your shopping cart? ").lower()
         if item in shopping_cart:
-            update = (f'You already have {item} in your cart! Would you like to update the quanity?').lower()
+            update = input(f'You already have {item} in your cart! Would you like to update the quanity? ').lower()
             if update == "yes":
                 amount = input("New quanitity: ")
                 shopping_cart[item] = amount
                 print("Updated!")
             elif update == "no":
                 print("Okay!")
-            else:
-                print("Sorry, try again")
-        quantity = input("How many would you like to add? ")
-        shopping_cart[item] = quantity
+            elif update != "yes" or update != "no":
+                print("Sorry, try again.")
+        else:
+            quantity = input("How many would you like to add? ")
+            shopping_cart[item] = quantity
     elif command == "show":
-        for i in shopping_cart.items():
-            print(i)
+        for key, value in shopping_cart.items():
+            print(f'{key}: {value}')
     elif command == "delete":
         for i in shopping_cart.items():
             print(i)
