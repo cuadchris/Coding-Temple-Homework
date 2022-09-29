@@ -43,7 +43,7 @@ def show(dict):
 
 def delete(dict):
     
-    for i in dict.items():
+    for i in dict.keys():
         print(i)
     grocery_to_delete = input("What would you like to delete from your cart? ")
     if grocery_to_delete not in dict.keys():
