@@ -8,5 +8,5 @@ def squareFootage():
 
 def circumference():
     radius = int(input("Enter the radius: "))
-    circumference = 2 * pi * radius
+    circumference = int(2 * pi * radius)
     print(f'The circumference is {circumference}')
