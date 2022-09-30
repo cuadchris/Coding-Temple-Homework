@@ -63,7 +63,7 @@ def clear(dict):
     else:
         print("Sorry, try again.")
 
-# ---------- Main Body ----------
+# ---------- Main Body ---------- #
 
 def shoppingCart():
     
