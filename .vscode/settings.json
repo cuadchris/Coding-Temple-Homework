@@ -18,6 +18,15 @@
             "driver": "PostgreSQL",
             "connectString": "postgres://kfpqohup:JYvoSEKXUqqXhZnjaIg5Qm8KlcEgwhET@peanut.db.elephantsql.com/kfpqohup",
             "name": "e-commerce-mock-up"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "connectString": "postgres://ganihook:FiVq7XY2gehmhAGoi9ci_3o4thAFK0BD@peanut.db.elephantsql.com/ganihook",
+            "name": "movie_theater"
         }
     ]
 }
