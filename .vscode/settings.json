@@ -27,6 +27,15 @@
             "driver": "PostgreSQL",
             "connectString": "postgres://ganihook:FiVq7XY2gehmhAGoi9ci_3o4thAFK0BD@peanut.db.elephantsql.com/ganihook",
             "name": "movie_theater"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "connectString": "postgres://hyvvymvr:p4KYLP0tD28i9r0R7IcgCEGVcMwgflH_@jelani.db.elephantsql.com/hyvvymvr",
+            "name": "join_demo"
         }
     ]
 }
