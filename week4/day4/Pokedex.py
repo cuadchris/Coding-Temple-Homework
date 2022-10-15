@@ -1,6 +1,7 @@
 import requests as r
 import random
 import time
+import sys
 
 class Pokedex():
     pokedata = []
@@ -57,6 +58,8 @@ class Pokedex():
         pokemon = input("Enter the Pokemon you'd like to catch: ").lower()
         chances = [True, False, False]
         result = random.choice(chances)
+        self.pokePrint("You used POKe´ BALL!\n")
+        time.sleep(1.5)
         print("wriggle..")
         time.sleep(2)
         print("wriggle...")
@@ -66,6 +69,14 @@ class Pokedex():
             print(f'{pokemon.capitalize()} was caught!')
             return
         print(f'{pokemon.capitalize()} escaped!')
+
+    def pokePrint(self, string):
+        for char in string:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.12)
+
+
         # url = f'https://pokeapi.co/api/v2/pokemon/{pokemon}'
         # response = r.get(url)
         # if not response.ok:
@@ -83,4 +94,5 @@ p1 = Pokedex()
 print(len(p1.pokedata))
 # p1.fillPokedex()
 p1.catchPokemon()
+# p1.catchPokemon()
 print(len(p1.pokedata))
