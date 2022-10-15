@@ -68,8 +68,3 @@ class Pokedex():
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(speed)
-
-pokedex = Pokedex()
-# pokedex.fillPokedex(5) < Use this to quick add.
-# pokedex.catchPokemon() < Use this to catch a Pokemon!
-# pokedex.showPokedex() < Show off your Codex!
