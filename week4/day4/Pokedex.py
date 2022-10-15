@@ -95,7 +95,8 @@ class Pokedex():
 
 p1 = Pokedex()
 # p1.catchPokemon()
-p1.fillPokedex()
-p1.fillPokedex()
-p1.showPokedex()
-print(len(p1.pokedata))
+# p1.fillPokedex()
+# p1.fillPokedex()
+# p1.showPokedex()
+# print(len(p1.pokedata))
+p1.catchPokemon()
