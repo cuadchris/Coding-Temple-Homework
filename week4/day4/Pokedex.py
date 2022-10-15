@@ -71,5 +71,5 @@ class Pokedex():
 
 pokedex = Pokedex()
 # pokedex.fillPokedex(5) < Use this to quick add.
-# p1.catchPokemon() < Use this to catch a Pokemon!
+# pokedex.catchPokemon() < Use this to catch a Pokemon!
 # pokedex.showPokedex() < Show off your Codex!
