@@ -56,9 +56,9 @@ class Pokedex():
 
     def catchPokemon(self):
         pokemon = input("Enter the Pokemon you'd like to catch: ").lower()
-        chances = [True, False, False]
+        chances = [True]
         result = random.choice(chances)
-        self.pokePrint("You used POKe´ BALL!\n")
+        self.pokePrint("You used POKe´BALL!\n", .08)
         time.sleep(1.5)
         print("wriggle..")
         time.sleep(2)
@@ -66,15 +66,18 @@ class Pokedex():
         time.sleep(2)
         if result:
             self.addPokemon(pokemon)
-            print(f'{pokemon.capitalize()} was caught!')
+            self.pokePrint(f'{pokemon.capitalize()} was caught!\n', .03)
+            time.sleep(1.5)
+            self.pokePrint("Here are the stats:\n", .03)
+            self.showPokemon(self.pokedata[-1], pokemon)
             return
-        print(f'{pokemon.capitalize()} escaped!')
+        self.pokePrint(f'{pokemon.capitalize()} escaped!\n', .03)
 
-    def pokePrint(self, string):
+    def pokePrint(self, string, speed):
         for char in string:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(.12)
+            time.sleep(speed)
 
 
         # url = f'https://pokeapi.co/api/v2/pokemon/{pokemon}'
@@ -91,8 +94,8 @@ class Pokedex():
         # self.pokedata.append(pokedict)
 
 p1 = Pokedex()
-print(len(p1.pokedata))
-# p1.fillPokedex()
-p1.catchPokemon()
 # p1.catchPokemon()
+p1.fillPokedex()
+p1.fillPokedex()
+p1.showPokedex()
 print(len(p1.pokedata))
