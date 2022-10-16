@@ -36,6 +36,15 @@
             "driver": "PostgreSQL",
             "connectString": "postgres://hyvvymvr:p4KYLP0tD28i9r0R7IcgCEGVcMwgflH_@jelani.db.elephantsql.com/hyvvymvr",
             "name": "join_demo"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "car_dealership",
+            "connectString": "postgres://jhjrrsap:MdSBTw2Thqv6-NsH4c1snwiRndBhEQsT@peanut.db.elephantsql.com/jhjrrsap"
         }
     ]
 }
