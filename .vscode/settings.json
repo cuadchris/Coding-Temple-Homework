@@ -45,6 +45,15 @@
             "driver": "PostgreSQL",
             "name": "car_dealership",
             "connectString": "postgres://jhjrrsap:MdSBTw2Thqv6-NsH4c1snwiRndBhEQsT@peanut.db.elephantsql.com/jhjrrsap"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "artists",
+            "connectString": "postgres://ssokszuu:fDJgBZt2cDf3RpjD0lWJedIg9uLW0SEu@peanut.db.elephantsql.com/ssokszuu"
         }
     ]
 }
