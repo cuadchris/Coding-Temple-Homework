@@ -77,7 +77,7 @@ p2.printInfo();
     If the length of the string is less than 10 console log "Small Number"
 */
 
-async function checkLength(str) {
+const checkLength = async (str) => {
   let promise = new Promise((resolve, reject) => {
     if (str.length > 10) {
       resolve("Big word");
@@ -91,7 +91,7 @@ async function checkLength(str) {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 checkLength("ThisWasAConfusingOne");
 
