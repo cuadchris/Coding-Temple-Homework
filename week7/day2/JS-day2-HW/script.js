@@ -78,24 +78,24 @@ p2.printInfo();
 */
 
 async function checkLength(str) {
-  let p = new Promise((resolve, reject) => {
+  
+  let promise = new Promise((resolve, reject) => {
     if (str.length > 10) {
       resolve("Big word");
     } else {
       reject("Small Number");
     }
   });
-  const response = await p;
-  return response;
-}
+  
+  try {
+    const response = await promise;
+    console.log(response)
+  } catch (error) {
+    console.log(error)
+  }
+};
 
-checkLength("ThisOneWasConfusing")
-  .then((message) => {
-    console.log(message);
-  })
-  .catch((message) => {
-    console.log(message);
-  });
+checkLength("ThisWasAConfusingOne")
 
 // CODE WARS
 
