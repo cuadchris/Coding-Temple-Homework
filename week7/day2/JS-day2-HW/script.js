@@ -78,7 +78,6 @@ p2.printInfo();
 */
 
 async function checkLength(str) {
-  
   let promise = new Promise((resolve, reject) => {
     if (str.length > 10) {
       resolve("Big word");
@@ -86,16 +85,15 @@ async function checkLength(str) {
       reject("Small Number");
     }
   });
-  
   try {
     const response = await promise;
-    console.log(response)
+    console.log(response);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-};
+}
 
-checkLength("ThisWasAConfusingOne")
+checkLength("ThisWasAConfusingOne");
 
 // CODE WARS
 
