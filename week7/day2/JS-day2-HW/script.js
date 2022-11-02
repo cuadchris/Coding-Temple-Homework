@@ -133,14 +133,14 @@ function createPhoneNumber(numbers) {
 //   (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
 
 function getSum(a, b) {
-  var list = [];
+  let list = [];
 
   if (a < b) {
-    for (var i = a; i <= b; i++) {
+    for (let i = a; i <= b; i++) {
       list.push(i);
     }
   } else {
-    for (var i = b; i <= a; i++) {
+    for (let i = b; i <= a; i++) {
       list.push(i);
     }
   }
