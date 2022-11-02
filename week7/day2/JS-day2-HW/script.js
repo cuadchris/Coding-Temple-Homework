@@ -18,17 +18,9 @@ let person3 = {
     }]
 }
 
-// for (const property in person3) {
-//     if ( typeof person3[property][0] == 'object') {
-//         person3[property].forEach(i => console.log(i))
-//     } else {
-//         console.log(`${property}: ${person3[property]}`);
-//     }
-//   }
-
-
 for (const property in person3) {
     if ( typeof person3[property][0] == 'object') {
+        console.log("Here come the favorite shakes!")
         for (const property in person3.shakes[0]) {
             console.log(`Person3's fav from ${property}: ${person3.shakes[0][property]}`);
         }
@@ -36,19 +28,6 @@ for (const property in person3) {
         console.log(`Person3's fav ${property}: ${person3[property]}`);
     }
   }
-
-
-// for (const property in person3.shakes[0]) {
-//     console.log(`${property}: ${person3.shakes[0][property]}`);
-// }
-
-
-// for (const property in person3.shakes[0]) {
-//         console.log(`${property}: ${person3.shakes[0][property]}`);
-//   }
-
-
-
 
 //=======Exercise #2=========//
 /*
@@ -61,13 +40,30 @@ age by 3 years. Use an arrow function for both methods
 */
 
 // Create our Person Prototype
-
-
+function Person(first, last, age) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+  
 // Use an arrow to create the printInfo method
+    this.printInfo = () => {
+        console.log(`${this.firstName} ${this.lastName} is ${this.age} years old.`)
+    }
 
 // Create another arrow function for the addAge method that takes a single parameter
 // Adding to the age 
+    this.addAge = (n) => this.age += n
+}
 
+const p1 = new Person("Brandt", "Carlson", 900);
+const p2 = new Person("Shoha", "Tsuchida", 1000);
+
+p1.printInfo()
+p1.addAge(3)
+p1.printInfo()
+p2.printInfo()
+p2.addAge(1)
+p2.printInfo()
 
 // =============Exercise #3 ============//
 /*
@@ -76,3 +72,4 @@ age by 3 years. Use an arrow function for both methods
     If the length is greater than ten console log "Big word". 
     If the length of the string is less than 10 console log "Small Number"
 */
+
