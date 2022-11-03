@@ -9,7 +9,6 @@ const getPokemon = async () => {
   for (let i = 0; i < data.abilities.length; i++) {
     abilities.push(data.abilities[i].ability.name);
   }
-  console.log(abilities);
   document.getElementById("pic").src = img;
   document.getElementById("name").innerText = (() => {
     // converting first letter to uppercase
