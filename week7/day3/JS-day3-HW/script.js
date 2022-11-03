@@ -17,7 +17,7 @@ const getPokemon = async () => {
   })();
   document.getElementById("abilities").innerHTML = abilities
     .map(function (ability) {
-      return "<li>" + ability + "</li>";
+      return "<li class='list-group-item'>" + ability + "</li>";
     })
     .join("");
 };
