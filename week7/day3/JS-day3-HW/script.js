@@ -20,3 +20,10 @@ const getPokemon = async () => {
     })
     .join("");
 };
+
+const clearData = () => {
+  document.getElementById("pic").src = "";
+  document.getElementById("name").innerText = "";
+  document.getElementById("abilities").innerHTML = "";
+
+}
