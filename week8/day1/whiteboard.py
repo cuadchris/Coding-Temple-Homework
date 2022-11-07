@@ -1,0 +1,10 @@
+
+
+
+
+
+def whiteboard():
+    pass
+
+
+whiteboard()
